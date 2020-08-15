@@ -6,4 +6,4 @@ This has following Modules
 2. receive
   this contains code to receive the image from sender and retrive the secret message in the image.
   
-This works on server/client architecture and requires both modules/system, to be connected to samme IP
+This works on server/client architecture and requires both modules/system, to be connected to same IP  
