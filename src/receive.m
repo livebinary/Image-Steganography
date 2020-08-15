@@ -1,30 +1,5 @@
 function varargout = receive(varargin)
-% RECEIVE MATLAB code for receive.fig
-%      RECEIVE, by itself, creates a new RECEIVE or raises the existing
-%      singleton*.
-%
-%      H = RECEIVE returns the handle to a new RECEIVE or the handle to
-%      the existing singleton*.
-%
-%      RECEIVE('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in RECEIVE.M with the given input arguments.
-%
-%      RECEIVE('Property','Value',...) creates a new RECEIVE or raises the
-%      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before receive_OpeningFcn gets called.  An
-%      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to receive_OpeningFcn via varargin.
-%
-%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
-%      instance to run (singleton)".
-%
-% See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help receive
-
-% Last Modified by GUIDE v2.5 04-May-2017 11:20:44
-
-% Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
@@ -41,35 +16,20 @@ if nargout
 else
     gui_mainfcn(gui_State, varargin{:});
 end
-% End initialization code - DO NOT EDIT
 
-
-% --- Executes just before receive is made visible.
 function receive_OpeningFcn(hObject, eventdata, handles, varargin)
-% This function has no output args, see OutputFcn.
-% hObject    handle to figure
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to receive (see VARARGIN)
 
-% Choose default command line output for receive
 handles.output = hObject;
 
-% Update handles structure
+
 guidata(hObject, handles);
 
-% UIWAIT makes receive wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
 
 
-% --- Outputs from this function are returned to the command line.
+
+
 function varargout = receive_OutputFcn(hObject, eventdata, handles) 
-% varargout  cell array for returning output args (see VARARGOUT);
-% hObject    handle to figure
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
 
-% Get default command line output from handles structure
 varargout{1} = handles.output;
 
 
@@ -89,8 +49,7 @@ im=reshape(im,512,512);
     imshow(im)
      assignin('base','im',im)
 
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
+
 
 
 % --- Executes on button press in pushbutton2.
@@ -126,5 +85,3 @@ for i=256:512
 end
 p=char(p)
 set(handles.aa,'String',p)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
